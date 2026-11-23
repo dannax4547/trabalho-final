@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos | Lucas Danna Persiani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== MENU ===== -->
+    <header class="cabecalho">
+        <nav class="menu">
+            <a href="index.html" class="logo">Lucas<span>.</span></a>
+            <ul class="menu-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="minhabiografia.html">Biografia</a></li>
+                <li><a href="caracteristicas.html">Características</a></li>
+                <li><a href="jogos.html" class="ativo">Jogos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== TOPO ===== -->
+        <section class="destaque centro">
+            <div class="container">
+                <h1>Meus feitos em <span>jogos</span></h1>
+                <p class="texto-suave">
+                    Meu jogo principal é o Counter-Strike 2.
+                    Total de feitos: <strong id="totalFeitos">0</strong>
+                </p>
+                <a href="https://steamcommunity.com/profiles/76561198979446259/" target="_blank" class="botao">Meu perfil na Steam</a>
+            </div>
+        </section>
+
+        <!-- ===== CONQUISTAS ===== -->
+        <section class="secao secao-escura">
+            <div class="container">
+                <h2>Minhas <span>conquistas</span></h2>
+                <!-- ajuste os feitos para os seus de verdade -->
+                <div class="cards">
+                    <article class="card feito">
+                        <div class="icone">💥</div>
+                        <p class="jogo">Counter-Strike 2</p>
+                        <h3>Ace em uma partida</h3>
+                        <p>Eliminei os 5 adversários sozinho em um round.</p>
+                        <div class="card-rodape">
+                            <span class="categoria">Jogada</span>
+                            <span class="estrelas">★★★★★</span>
+                        </div>
+                    </article>
+                    <article class="card feito">
+                        <div class="icone">🧠</div>
+                        <p class="jogo">Counter-Strike 2</p>
+                        <h3>Clutch decisivo</h3>
+                        <p>Ganhei um round sozinho contra vários adversários.</p>
+                        <div class="card-rodape">
+                            <span class="categoria">Jogada</span>
+                            <span class="estrelas">★★★★☆</span>
+                        </div>
+                    </article>
+                    <article class="card feito">
+                        <div class="icone">📈</div>
+                        <p class="jogo">Counter-Strike 2</p>
+                        <h3>Subi de rank</h3>
+                        <p>Alcancei um rank novo no competitivo.</p>
+                        <div class="card-rodape">
+                            <span class="categoria">Ranking</span>
+                            <span class="estrelas">★★★★☆</span>
+                        </div>
+                    </article>
+                    <article class="card feito">
+                        <div class="icone">⏱️</div>
+                        <p class="jogo">Counter-Strike 2</p>
+                        <h3>Centenas de horas</h3>
+                        <p>Muitas horas de treino e partidas com os amigos.</p>
+                        <div class="card-rodape">
+                            <span class="categoria">Dedicação</span>
+                            <span class="estrelas">★★★☆☆</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape" id="contato">
+        <a href="index.html" class="logo">Lucas<span>.</span></a>
+        <nav class="redes">
+            <a href="https://github.com/dannax4547" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/lucas-danna-persiani" target="_blank">LinkedIn</a>
+            <a href="mailto:lucasdanna.persiani@gmail.com">Gmail</a>
+            <a href="https://steamcommunity.com/profiles/76561198979446259/" target="_blank">Steam</a>
+        </nav>
+        <p>&copy; <span id="ano"></span> Lucas Danna Persiani · Londrina - PR</p>
+    </footer>
+
+    <button class="voltar-topo escondido" id="voltarTopo" aria-label="Voltar ao topo">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,210 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Danna Persiani | Portfólio</title>
-    <meta name="description" content="Portfólio pessoal de Lucas Danna Persiani">
-
-    <!-- fonte do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- estilos do portfólio -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- criacao do corpo do meu portifolio pessoal -->
 
     <!-- ===== MENU ===== -->
     <header class="cabecalho">
-        <nav class="menu container">
-            <a href="#inicio" class="logo">Lucas<span>.</span></a>
-
-            <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-
-            <ul class="menu-links" id="menuLinks">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+        <nav class="menu">
+            <a href="index.html" class="logo">Lucas<span>.</span></a>
+            <ul class="menu-links">
+                <li><a href="index.html" class="ativo">Início</a></li>
                 <li><a href="minhabiografia.html">Biografia</a></li>
                 <li><a href="caracteristicas.html">Características</a></li>
+                <li><a href="jogos.html">Jogos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- ===== INÍCIO ===== -->
-        <section class="inicio" id="inicio">
-            <div class="container inicio-conteudo">
-                <div class="inicio-texto">
-                    <p class="saudacao">Olá, eu sou</p>
+        <!-- ===== APRESENTAÇÃO ===== -->
+        <section class="destaque">
+            <div class="container topo">
+                <div>
+                    <p class="texto-suave" id="saudacao">Olá! Eu sou</p>
                     <h1>Lucas Danna <span>Persiani</span></h1>
-                    <p class="cargo">
-                        <span id="textoDigitado"></span><span class="cursor">|</span>
+                    <p class="texto-suave">
+                        Estudante da UniFil, em Londrina, aprendendo desenvolvimento web.
+                        Bem-vindo ao meu portfólio!
                     </p>
-                    <p class="descricao">
-                        Bem-vindo ao meu portfólio! Aqui você conhece um pouco sobre mim,
-                        as coisas que eu sei fazer e os projetos que já desenvolvi.
-                    </p>
-                    <div class="botoes">
-                        <a href="#projetos" class="botao botao-principal">Ver projetos</a>
-                        <a href="#contato" class="botao botao-secundario">Fale comigo</a>
+                    <div class="etiquetas">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
                     </div>
+                    <a href="minhabiografia.html" class="botao">Minha biografia</a>
+                    <a href="#contato" class="botao botao-vazado">Fale comigo</a>
                 </div>
-
-                <div class="inicio-foto">
-                    <!-- para usar sua foto: coloque o arquivo na pasta img e troque o src (ex.: img/foto-perfil.jpg) -->
-                    <img src="img/foto-perfil.svg" alt="Foto de perfil de Lucas Danna Persiani" class="foto-circulo">
-                </div>
+                <img src="img/foto-perfil.png" alt="Foto de perfil de Lucas Danna Persiani" class="foto">
             </div>
         </section>
 
         <!-- ===== SOBRE ===== -->
-        <section class="secao" id="sobre">
-            <div class="container">
-                <h2 class="titulo-secao">Sobre <span>mim</span></h2>
-                <div class="sobre-conteudo revelar">
-                    <p>
-                        Meu nome é <strong>Lucas Danna Persiani</strong>. Sou uma pessoa curiosa,
-                        que gosta de aprender coisas novas e de transformar ideias em projetos reais.
-                        Estou estudando desenvolvimento web e cada projeto é uma nova oportunidade
-                        de evoluir.
-                    </p>
-                    <p>
-                        Quer saber mais? Leia a minha <a href="minhabiografia.html">biografia completa</a>
-                        ou veja as minhas <a href="caracteristicas.html">características</a>.
-                    </p>
+        <section class="secao secao-escura">
+            <div class="container centro">
+                <h2>Sobre <span>mim</span></h2>
+                <p class="texto-suave">
+                    Meu nome é <strong>Lucas Danna Persiani</strong>. Sou uma pessoa bastante criativa e buscando sempre aprender coisas novas. Tenho interesse em desenvolvimento jogos e aplicativos de auxílio, programação, tecnologia e inovação em geral.
+                </p>
+                <p class="texto-suave escondido" id="maisSobre">
+                    Nas horas livres gosto de jogar Counter-Strike 2 com os amigos na Steam.
+                    Meu objetivo é me tornar um desenvolvedor profissional.
+                </p>
+                <button class="botao" id="botaoLerMais">Ler mais</button>
 
-                    <div class="numeros">
-                        <div class="numero">
-                            <strong>3+</strong>
-                            <span>Projetos</span>
-                        </div>
-                        <div class="numero">
-                            <strong>3</strong>
-                            <span>Linguagens</span>
-                        </div>
-                        <div class="numero">
-                            <strong>100%</strong>
-                            <span>Dedicação</span>
-                        </div>
-                    </div>
+                <div class="numeros">
+                    <div class="numero"><strong>4</strong>Páginas</div>
+                    <div class="numero"><strong>3</strong>Linguagens</div>
+                    <div class="numero"><strong>100%</strong>Dedicação</div>
                 </div>
             </div>
         </section>
 
         <!-- ===== HABILIDADES ===== -->
-        <section class="secao secao-escura" id="habilidades">
+        <section class="secao">
             <div class="container">
-                <h2 class="titulo-secao">Minhas <span>habilidades</span></h2>
+                <h2>Minhas <span>habilidades</span></h2>
+                <!-- mude o width para ajustar o tamanho de cada barra -->
                 <div class="cards">
-                    <div class="card revelar">
-                        <div class="card-icone">&lt;/&gt;</div>
+                    <article class="card">
+                        <div class="icone">📄</div>
                         <h3>HTML</h3>
-                        <p>Estrutura de páginas web organizadas e semânticas.</p>
-                        <div class="barra"><div class="barra-progresso" data-nivel="80"></div></div>
-                    </div>
-                    <div class="card revelar">
-                        <div class="card-icone">{ }</div>
+                        <p>Estrutura das páginas.</p>
+                        <div class="barra"><div class="barra-nivel" style="width: 80%"></div></div>
+                    </article>
+                    <article class="card">
+                        <div class="icone">🎨</div>
                         <h3>CSS</h3>
-                        <p>Estilos, cores, layouts e páginas responsivas.</p>
-                        <div class="barra"><div class="barra-progresso" data-nivel="70"></div></div>
-                    </div>
-                    <div class="card revelar">
-                        <div class="card-icone">JS</div>
+                        <p>Cores, layout e animações.</p>
+                        <div class="barra"><div class="barra-nivel" style="width: 70%"></div></div>
+                    </article>
+                    <article class="card">
+                        <div class="icone">⚙️</div>
                         <h3>JavaScript</h3>
-                        <p>Interatividade e lógica para deixar o site vivo.</p>
-                        <div class="barra"><div class="barra-progresso" data-nivel="55"></div></div>
-                    </div>
-                    <div class="card revelar">
-                        <div class="card-icone">Git</div>
+                        <p>Interatividade no site.</p>
+                        <div class="barra"><div class="barra-nivel" style="width: 55%"></div></div>
+                    </article>
+                    <article class="card">
+                        <div class="icone">🌿</div>
                         <h3>Git</h3>
-                        <p>Controle de versão para guardar a história do código.</p>
-                        <div class="barra"><div class="barra-progresso" data-nivel="50"></div></div>
-                    </div>
+                        <p>Controle de versão do código.</p>
+                        <div class="barra"><div class="barra-nivel" style="width: 50%"></div></div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- ===== PROJETOS ===== -->
-        <section class="secao" id="projetos">
+        <!-- ===== OUTRAS PÁGINAS ===== -->
+        <section class="secao secao-escura">
             <div class="container">
-                <h2 class="titulo-secao">Meus <span>projetos</span></h2>
+                <h2>Conheça <span>mais</span></h2>
                 <div class="cards">
-                    <article class="projeto revelar">
-                        <div class="projeto-capa capa-1">Portfólio</div>
-                        <div class="projeto-info">
-                            <h3>Portfólio pessoal</h3>
-                            <p>Este site! Feito com HTML, CSS e JavaScript.</p>
-                            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-                        </div>
+                    <article class="card">
+                        <div class="icone">📖</div>
+                        <h3>Biografia</h3>
+                        <p>A minha história, de Londrina até aqui.</p>
+                        <a href="minhabiografia.html">Abrir página →</a>
                     </article>
-                    <article class="projeto revelar">
-                        <div class="projeto-capa capa-2">Biografia</div>
-                        <div class="projeto-info">
-                            <h3>Minha biografia</h3>
-                            <p>Página contando a minha história e trajetória.</p>
-                            <div class="tags"><span>HTML</span><span>CSS</span></div>
-                            <a href="minhabiografia.html" class="link-projeto">Abrir página →</a>
-                        </div>
+                    <article class="card">
+                        <div class="icone">✨</div>
+                        <h3>Características</h3>
+                        <p>O meu jeito de ser.</p>
+                        <a href="caracteristicas.html">Abrir página →</a>
                     </article>
-                    <article class="projeto revelar">
-                        <div class="projeto-capa capa-3">Características</div>
-                        <div class="projeto-info">
-                            <h3>Minhas características</h3>
-                            <p>Página com as minhas qualidades e jeito de ser.</p>
-                            <div class="tags"><span>HTML</span><span>CSS</span></div>
-                            <a href="caracteristicas.html" class="link-projeto">Abrir página →</a>
-                        </div>
+                    <article class="card">
+                        <div class="icone">🎮</div>
+                        <h3>Jogos</h3>
+                        <p>Meus feitos no Counter-Strike 2.</p>
+                        <a href="jogos.html">Abrir página →</a>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== CONTATO ===== -->
-        <section class="secao secao-escura" id="contato">
-            <div class="container">
-                <h2 class="titulo-secao">Entre em <span>contato</span></h2>
-                <form class="formulario revelar" id="formulario">
-                    <input type="text" id="nome" placeholder="Seu nome" required>
-                    <input type="email" id="email" placeholder="Seu e-mail" required>
-                    <textarea id="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-                    <button type="submit" class="botao botao-principal">Enviar mensagem</button>
-                    <p class="aviso" id="aviso"></p>
-                </form>
-
-                <!-- troque os links abaixo pelos seus perfis de verdade -->
-                <div class="redes">
-                    <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="mailto:seuemail@gmail.com">Gmail</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- ===== RODAPÉ ===== -->
-    <footer class="rodape">
-        <div class="container rodape-conteudo">
-            <a href="index.html" class="logo">Lucas<span>.</span></a>
-
-            <!-- troque SEU-USUARIO e o e-mail pelos seus dados -->
-            <nav class="rodape-redes" aria-label="Redes sociais">
-                <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="mailto:seuemail@gmail.com">Gmail</a>
-            </nav>
-
-            <p>&copy; <span id="ano"></span> Lucas Danna Persiani. Todos os direitos reservados.</p>
-        </div>
+    <footer class="rodape" id="contato">
+        <a href="index.html" class="logo">Lucas<span>.</span></a>
+        <nav class="redes">
+            <a href="https://github.com/dannax4547" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/lucas-danna-persiani" target="_blank">LinkedIn</a>
+            <a href="mailto:lucasdanna.persiani@gmail.com">Gmail</a>
+            <a href="https://steamcommunity.com/profiles/76561198979446259/" target="_blank">Steam</a>
+        </nav>
+        <p>&copy; <span id="ano"></span> Lucas Danna Persiani · Londrina - PR</p>
     </footer>
 
-    <button class="voltar-topo" id="voltarTopo" aria-label="Voltar ao topo">↑</button>
+    <button class="voltar-topo escondido" id="voltarTopo" aria-label="Voltar ao topo">↑</button>
 
-    <!-- scripts do portfólio -->
     <script src="script.js"></script>
 </body>
 </html>
