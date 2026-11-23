@@ -3,9 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>minhas caracteristicas</title>
+    <title>Características | Lucas Danna Persiani</title>
+    <meta name="description" content="Características pessoais de Lucas Danna Persiani">
+
+    <!-- fonte do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- estilos gerais do portfólio (menu, cores, botões, rodapé...) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- estilos só desta página -->
+    <style>
+        /* ===== TOPO DA PÁGINA ===== */
+        .topo-pagina {
+            padding: 150px 0 80px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--cor-destaque) calc(0.2 * 100%), transparent), transparent 50%),
+                radial-gradient(circle at 85% 85%, color-mix(in srgb, var(--cor-principal) calc(0.25 * 100%), transparent), transparent 45%),
+                var(--fundo);
+        }
+
+        .topo-pagina h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin: 8px 0 16px;
+        }
+
+        .topo-pagina h1 span {
+            color: var(--cor-principal);
+        }
+
+        .topo-pagina p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--texto-suave);
+        }
+
+        /* palavras que resumem a personalidade */
+        .palavras {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .palavras span {
+            padding: 6px 18px;
+            border-radius: 30px;
+            border: 2px solid var(--cor-principal);
+            font-size: 0.95rem;
+        }
+
+        .card-icone.emoji {
+            font-size: 1.6rem;
+        }
+
+        /* ===== HABILIDADES PESSOAIS (barras) ===== */
+        .habilidades-pessoais {
+            max-width: 750px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .habilidade-topo {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .habilidade-topo span:last-child {
+            color: var(--cor-destaque);
+        }
+
+        /* ===== PONTOS FORTES x A MELHORAR ===== */
+        .colunas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .coluna {
+            background: var(--fundo-card);
+            border-radius: 16px;
+            padding: 30px;
+            border-top: 4px solid var(--cor-destaque);
+        }
+
+        .coluna.melhorar {
+            border-top-color: #f59e0b;
+        }
+
+        .coluna h3 {
+            margin-bottom: 16px;
+        }
+
+        .coluna ul {
+            list-style: none;
+        }
+
+        .coluna li {
+            color: var(--texto-suave);
+            padding: 8px 0 8px 30px;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .coluna li:last-child {
+            border-bottom: none;
+        }
+
+        .coluna li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--cor-destaque);
+        }
+
+        .coluna.melhorar li::before {
+            content: '➜';
+            color: #f59e0b;
+        }
+
+        /* ===== CURIOSIDADES ===== */
+        .curiosidades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            counter-reset: curiosidade;
+        }
+
+        .curiosidade {
+            background: var(--fundo-card);
+            border-radius: 14px;
+            padding: 24px;
+            counter-increment: curiosidade;
+        }
+
+        .curiosidade::before {
+            content: '0' counter(curiosidade);
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--cor-principal);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .curiosidade p {
+            color: var(--texto-suave);
+        }
+
+        /* ===== CHAMADA FINAL ===== */
+        .chamada {
+            text-align: center;
+        }
+
+        .chamada p {
+            color: var(--texto-suave);
+            margin-bottom: 28px;
+        }
+
+        .chamada .botoes {
+            justify-content: center;
+        }
+
+        /* ===== CELULAR ===== */
+        @media (max-width: 900px) {
+            .topo-pagina {
+                padding: 120px 0 60px;
+            }
+
+            .topo-pagina h1 {
+                font-size: 2.3rem;
+            }
+
+            .colunas {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <!-- ===== MENU ===== -->
+    <header class="cabecalho">
+        <nav class="menu container">
+            <a href="index.html" class="logo">Lucas<span>.</span></a>
+
+            <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="menu-links" id="menuLinks">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#habilidades">Habilidades</a></li>
+                <li><a href="index.html#projetos">Projetos</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="minhabiografia.html">Biografia</a></li>
+                <li><a href="caracteristicas.html" class="ativo">Características</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== TOPO ===== -->
+        <section class="topo-pagina">
+            <div class="container">
+                <p class="saudacao">Meu jeito de ser</p>
+                <h1>Minhas <span>características</span></h1>
+                <p>
+                    Um pouco sobre a minha personalidade, as minhas qualidades
+                    e o que eu ainda estou aprendendo a melhorar.
+                </p>
+
+                <!-- palavras que me descrevem -->
+                <div class="palavras">
+                    <span>Curioso</span>
+                    <span>Criativo</span>
+                    <span>Dedicado</span>
+                    <span>Calmo</span>
+                    <span>Amigável</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PERSONALIDADE ===== -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="titulo-secao">Minha <span>personalidade</span></h2>
+
+                <!-- troque pelos traços que mais combinam com você -->
+                <div class="cards">
+                    <div class="card revelar">
+                        <div class="card-icone emoji">🔍</div>
+                        <h3>Curioso</h3>
+                        <p>Gosto de fazer perguntas e entender o porquê das coisas.</p>
+                    </div>
+                    <div class="card revelar">
+                        <div class="card-icone emoji">💡</div>
+                        <h3>Criativo</h3>
+                        <p>Sempre procuro jeitos diferentes de resolver um problema.</p>
+                    </div>
+                    <div class="card revelar">
+                        <div class="card-icone emoji">🎯</div>
+                        <h3>Dedicado</h3>
+                        <p>Quando começo algo, me esforço para terminar bem feito.</p>
+                    </div>
+                    <div class="card revelar">
+                        <div class="card-icone emoji">🤝</div>
+                        <h3>Parceiro</h3>
+                        <p>Gosto de trabalhar em equipe e ajudar quem está ao meu lado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== HABILIDADES PESSOAIS ===== -->
+        <section class="secao secao-escura">
+            <div class="container">
+                <h2 class="titulo-secao">Habilidades <span>pessoais</span></h2>
+
+                <!-- mude o número em data-nivel e no texto para ajustar cada barra -->
+                <div class="habilidades-pessoais">
+                    <div class="revelar">
+                        <div class="habilidade-topo"><span>Criatividade</span><span>85%</span></div>
+                        <div class="barra"><div class="barra-progresso" data-nivel="85"></div></div>
+                    </div>
+                    <div class="revelar">
+                        <div class="habilidade-topo"><span>Trabalho em equipe</span><span>80%</span></div>
+                        <div class="barra"><div class="barra-progresso" data-nivel="80"></div></div>
+                    </div>
+                    <div class="revelar">
+                        <div class="habilidade-topo"><span>Força de vontade</span><span>90%</span></div>
+                        <div class="barra"><div class="barra-progresso" data-nivel="90"></div></div>
+                    </div>
+                    <div class="revelar">
+                        <div class="habilidade-topo"><span>Comunicação</span><span>70%</span></div>
+                        <div class="barra"><div class="barra-progresso" data-nivel="70"></div></div>
+                    </div>
+                    <div class="revelar">
+                        <div class="habilidade-topo"><span>Organização</span><span>65%</span></div>
+                        <div class="barra"><div class="barra-progresso" data-nivel="65"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PONTOS FORTES x A MELHORAR ===== -->
+        <section class="secao">
+            <div class="container">
+                <h2 class="titulo-secao">Pontos <span>fortes</span> e a melhorar</h2>
+
+                <div class="colunas">
+                    <div class="coluna revelar">
+                        <h3>Pontos fortes</h3>
+                        <ul>
+                            <li>Aprendo rápido quando o assunto me interessa</li>
+                            <li>Tenho paciência para resolver problemas</li>
+                            <li>Sou respeitoso com as pessoas</li>
+                            <li>Não desisto fácil</li>
+                        </ul>
+                    </div>
+                    <div class="coluna melhorar revelar">
+                        <h3>Estou melhorando</h3>
+                        <ul>
+                            <li>Organizar melhor o meu tempo</li>
+                            <li>Falar em público com mais confiança</li>
+                            <li>Pedir ajuda quando preciso</li>
+                            <li>Não deixar tarefas para a última hora</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CURIOSIDADES ===== -->
+        <section class="secao secao-escura">
+            <div class="container">
+                <h2 class="titulo-secao">Curiosidades <span>sobre mim</span></h2>
+
+                <!-- troque pelas suas curiosidades de verdade -->
+                <div class="curiosidades">
+                    <div class="curiosidade revelar">
+                        <p>Gosto de ouvir música enquanto estudo ou programo.</p>
+                    </div>
+                    <div class="curiosidade revelar">
+                        <p>Prefiro aprender fazendo do que só lendo a teoria.</p>
+                    </div>
+                    <div class="curiosidade revelar">
+                        <p>Fico feliz quando um código finalmente funciona depois de muitas tentativas.</p>
+                    </div>
+                    <div class="curiosidade revelar">
+                        <p>Meu sonho é criar algo que muita gente use no dia a dia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CHAMADA FINAL ===== -->
+        <section class="secao">
+            <div class="container chamada revelar">
+                <h2 class="titulo-secao" style="margin-bottom: 16px;">Vamos <span>conversar?</span></h2>
+                <p>Leia a minha biografia ou volte ao portfólio para entrar em contato.</p>
+                <div class="botoes">
+                    <a href="minhabiografia.html" class="botao botao-principal">Minha biografia</a>
+                    <a href="index.html#contato" class="botao botao-secundario">Entrar em contato</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <a href="index.html" class="logo">Lucas<span>.</span></a>
+
+            <!-- troque SEU-USUARIO e o e-mail pelos seus dados -->
+            <nav class="rodape-redes" aria-label="Redes sociais">
+                <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:seuemail@gmail.com">Gmail</a>
+            </nav>
+
+            <p>&copy; <span id="ano"></span> Lucas Danna Persiani. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="voltar-topo" id="voltarTopo" aria-label="Voltar ao topo">↑</button>
+
+    <!-- scripts do portfólio -->
+    <script src="script.js"></script>
 </body>
 </html>
